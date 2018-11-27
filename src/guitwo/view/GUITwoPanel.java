@@ -13,14 +13,36 @@ public class GUITwoPanel extends JPanel
 	private JButton firstButton;
 	private SpringLayout appLayout;
 	
-	public GUITwoPanel(GUITwoController apController)
+	public GUITwoPanel(GUITwoController appController)
 	{
 		super();
 		
 		this.appController = appController;
 		
-		firstLabel = new Jlabel("word in a line");
-		firstButton = new 
+		firstLabel = new JLabel("label");
+		firstButton = new JButton("bruh");
+		appLayout = new SpringLayout();
+		
+		setupPanel();
+		setupLayout();
+		setupListeners();
+	}
+	
+	private void setupPanel()
+	{
+		this.setLayout(appLayout);
+		this.add(firstButton);
+		this.add(firstLabel);
+	}
+	
+	private void setupLayout()
+	{
+		
+	}
+	
+	private void setupListeners()
+	{
+		firstButton.addActionListener(new ActionListener() {public void actionPerformed(ActionEvent mouseClick){}});
 	}
 	
 	
